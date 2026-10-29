@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="A friendly, interactive graduate-level introduction to how the autonomic nervous system responds to stress and recovers.">
-  <title>What Stress Does to Your Body | Interactive Explainer</title>
+  <meta name="description" content="A simple, interactive guide to stress and recovery.">
+  <title>Stress, Made Simple | Body &amp; Brain</title>
   <style>
     :root {
       --ink: #19263a;
@@ -51,7 +51,7 @@
     .site-nav a:hover,.site-nav a:focus-visible {background:var(--blue-wash);color:var(--blue-dark)}
     .top-tag {border:1px solid var(--line);border-radius:100px;padding:7px 12px;font-size:11px;font-weight:850;color:var(--ink-muted);letter-spacing:.08em;white-space:nowrap}
     main {overflow:clip}
-    .hero {padding:76px 0 70px;display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
+    .hero {padding:58px 0 55px;display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
     .eyebrow {display:inline-flex;align-items:center;gap:9px;letter-spacing:.125em;text-transform:uppercase;font-size:11px;font-weight:850;color:var(--blue-dark)}
     .eyebrow-dot {width:8px;height:8px;border-radius:50%;background:var(--blue)}
     h1,h2,h3,p {margin-top:0}
@@ -78,8 +78,8 @@
     .tile-title {font-size:17px;font-weight:850;letter-spacing:-.025em}
     .response-tile.gas .tile-title {color:var(--gas)}
     .response-tile.brake .tile-title {color:var(--brake)}
-    .section {padding:67px 0 70px;border-top:1px solid var(--line)}
-    .section-head {margin:0 0 29px;max-width:750px}
+    .section {padding:56px 0 60px;border-top:1px solid var(--line)}
+    .section-head {margin:0 0 24px;max-width:750px}
     .section-number {font-size:12px;font-weight:900;letter-spacing:.145em;color:var(--blue);margin-bottom:11px;text-transform:uppercase}
     h2 {font-size:clamp(28px,3.6vw,39px);font-weight:850;letter-spacing:-.04em;line-height:1.18;margin:0 0 13px}
     .section-intro {font-size:16px;line-height:1.75;color:var(--ink-muted);margin:0}
@@ -97,7 +97,7 @@
     .tree-connector::after {content:"";position:absolute;top:62px;left:0;height:22px;border-left:2px solid #bcc9df;box-shadow:0 0 0 transparent}
     .branches {display:grid;grid-template-columns:1fr 1fr;gap:14px;padding-top:21px;position:relative}
     .branches::before {content:"";position:absolute;top:0;right:25%;height:21px;border-left:2px solid #bcc9df}
-    .branch {appearance:none;display:flex;flex-direction:column;text-align:left;background:#fff;border:2px solid var(--line);padding:19px 16px 17px;border-radius:17px;min-height:207px;transition:border-color .18s,background .18s,transform .18s,box-shadow .18s;position:relative}
+    .branch {appearance:none;display:flex;flex-direction:column;text-align:left;background:#fff;border:2px solid var(--line);padding:19px 16px 17px;border-radius:17px;min-height:178px;transition:border-color .18s,background .18s,transform .18s,box-shadow .18s;position:relative}
     .branch:hover {transform:translateY(-2px);box-shadow:0 9px 20px rgba(33,49,77,.07)}
     .branch[aria-pressed="true"].gas {border-color:var(--gas);background:var(--gas-wash)}
     .branch[aria-pressed="true"].brake {border-color:var(--brake);background:var(--brake-wash)}
@@ -139,7 +139,7 @@
     .rail-title {font-size:14px;font-weight:850;letter-spacing:-.01em}
     .rail-count {font-size:12px;font-weight:800;color:var(--ink-muted)}
     .timeline-items {list-style:none;margin:0;padding:0}
-    .timeline-items li {position:relative;padding:0 0 0 47px;min-height:66px}
+    .timeline-items li {position:relative;padding:0 0 0 47px;min-height:60px}
     .timeline-items li:not(:last-child)::before {content:"";position:absolute;left:16px;top:31px;bottom:-4px;width:2px;background:var(--line)}
     .timeline-items li.revealed:not(:last-child)::before {background:#b8c6f7}
     .timeline-point {border:0;appearance:none;width:100%;min-height:55px;display:flex;align-items:center;gap:12px;text-align:left;padding:8px 10px;border-radius:11px;background:transparent;color:var(--ink-muted)}
@@ -155,18 +155,18 @@
     .step-title {display:block;font-weight:800;font-size:13px;line-height:1.35;color:var(--ink)}
     .step-subtitle {display:block;font-size:11px;line-height:1.35;color:var(--ink-soft);margin-top:3px}
     .timeline-point[aria-disabled="true"] .step-title {color:var(--ink-soft)}
-    .timeline-stage {padding:31px;min-height:487px;display:flex;flex-direction:column;overflow:hidden}
+    .timeline-stage {padding:31px;min-height:405px;display:flex;flex-direction:column;overflow:hidden}
     .stage-overline {display:flex;justify-content:space-between;gap:10px;align-items:center;letter-spacing:.1em;font-size:11px;font-weight:900;text-transform:uppercase;color:var(--ink-soft)}
     .stage-phase {display:inline-block;border-radius:100px;padding:7px 11px;font-size:10px;background:var(--gas-wash);color:var(--gas);letter-spacing:.075em}
     .stage-phase.recovery {background:var(--brake-wash);color:var(--brake)}
-    .stage-meter {height:7px;background:#edf1f6;border-radius:100px;overflow:hidden;margin:20px 0 45px}
+    .stage-meter {height:7px;background:#edf1f6;border-radius:100px;overflow:hidden;margin:20px 0 26px}
     .stage-fill {height:100%;width:0;background:var(--blue);border-radius:100px;transition:width .25s ease}
     .timeline-stage:has(.stage-phase.recovery) .stage-fill {background:var(--brake)}
     .stage-graphic {width:68px;height:68px;border-radius:18px;background:var(--blue-wash);display:grid;place-items:center;color:var(--blue);margin-bottom:22px}
     .stage-graphic.is-gas {background:var(--gas-wash);color:var(--gas)}
     .stage-graphic.is-brake {background:var(--brake-wash);color:var(--brake)}
     .stage-title {font-size:30px;line-height:1.22;letter-spacing:-.035em;font-weight:850;margin-bottom:13px}
-    .stage-copy {font-size:15px;color:var(--ink-muted);line-height:1.8;max-width:560px;margin-bottom:24px;min-height:77px}
+    .stage-copy {font-size:15px;color:var(--ink-muted);line-height:1.8;max-width:560px;margin-bottom:20px;min-height:45px}
     .stage-bottom {margin-top:auto;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--line)}
     .primary-button {background:var(--blue);color:#fff;border:2px solid var(--blue);border-radius:12px;padding:12px 19px;min-height:47px;font-size:13px;font-weight:850;display:inline-flex;gap:9px;align-items:center;justify-content:center;transition:background .15s,transform .15s}
     .primary-button:hover {background:var(--blue-dark);border-color:var(--blue-dark);transform:translateY(-1px)}
@@ -181,7 +181,10 @@
     .compare-card p {color:var(--ink-muted);font-size:14px;line-height:1.8;margin:0}
     .compare-note {margin-top:18px;background:var(--cloud);border:1px solid var(--line);padding:19px 23px;border-radius:15px;font-size:13px;line-height:1.85;color:var(--ink-muted)}
     .compare-note strong {color:var(--ink)}
-    .quiz-section {padding-bottom:95px}
+    .compare-note summary {cursor:pointer;color:var(--blue-dark);font-size:14px;font-weight:800}
+    .compare-note summary:hover {text-decoration:underline}
+    .compare-note p {margin:12px 0 0}
+    .quiz-section {padding-bottom:68px}
     .quiz-header {display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:23px}
     .quiz-header .section-head {margin:0}
     .quiz-score {min-width:178px;white-space:nowrap;border:1px solid var(--line);background:var(--cloud);border-radius:16px;padding:14px 19px;text-align:right}
@@ -239,7 +242,7 @@
       .section {padding:50px 0 53px}
       .section-intro {font-size:14px}
       .diagram-panel,.detail-panel,.timeline-stage {padding:22px 18px}
-      .branch {padding:15px 11px;min-height:191px}
+      .branch {padding:15px 11px;min-height:170px}
       .branch-name {font-size:14px;overflow-wrap:anywhere}
       .branch-desc {font-size:12px}
       .branch-footer {font-size:10px}
@@ -280,9 +283,9 @@
         <span>BODY &amp; BRAIN <span style="color:var(--blue)">/</span> LAB</span>
       </a>
       <nav class="site-nav" aria-label="Lesson sections">
-        <a href="#system">The system</a><a href="#timeline">The timeline</a><a href="#stress-types">Stress types</a><a href="#quiz">Self-check</a>
+        <a href="#system">Two modes</a><a href="#timeline">Step by step</a><a href="#stress-types">Stress types</a><a href="#quiz">Quick quiz</a>
       </nav>
-      <span class="top-tag">A 6-MIN MICRO-LESSON</span>
+      <span class="top-tag">INTERACTIVE LESSON</span>
     </div>
   </header>
 
@@ -290,17 +293,17 @@
     <div class="container">
       <section class="hero" aria-labelledby="page-title">
         <div>
-          <div class="eyebrow"><span class="eyebrow-dot"></span> A BIOLOGY-FREE STARTING POINT</div>
-          <h1 id="page-title">What Stress Does to Your Body</h1>
-          <p class="hero-copy">You open an exam and the questions look much harder than expected. Your heart races. Your breathing speeds up. What just happened—and how does your body settle again?</p>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> STRESS, EXPLAINED SIMPLY</div>
+          <h1 id="page-title">What Happens When You Feel Stressed?</h1>
+          <p class="hero-copy">A hard exam question. A racing heart. Fast breathing. See why your body reacts—and how it calms down.</p>
           <div class="hero-chips">
-            <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 3v18M4 12h16"/></svg> No biology background needed</span>
-            <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Click, explore, and check yourself</span>
+            <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M12 3v18M4 12h16"/></svg> No science background needed</span>
+            <span class="chip"><svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg> Tap, explore, and quiz yourself</span>
           </div>
         </div>
         <div class="hero-art" aria-label="Illustration of an exam paper and the body's gas and brake responses" role="img">
           <div class="exam-card" aria-hidden="true">
-            <div class="exam-top"><span>GRADUATE EXAM</span><span>01 / 04</span></div>
+            <div class="exam-top"><span>EXAM DAY</span><span>01 / 04</span></div>
             <div class="exam-label">Question 1</div>
             <div class="fake-line"></div><div class="fake-line mid"></div><div class="fake-line short"></div>
             <div class="question-mark">?</div>
@@ -316,29 +319,29 @@
     <section class="section" id="system" aria-labelledby="system-title">
       <div class="container">
         <div class="section-head">
-          <div class="section-number">01 / EXPLORE</div>
-          <h2 id="system-title">Your body has a gas pedal and a brake.</h2>
-          <p class="section-intro">Your <button class="term" type="button" aria-expanded="false">autonomic nervous system<span class="tip" role="tooltip">The system that manages body activities you do not have to control consciously, such as heart rate and breathing.</span></button> manages involuntary bodily functions. It has two main branches. Choose a branch in the diagram to see what it does.</p>
-          <div class="interaction-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 4 9 8-5 1-2 6-3-1 2-6-4-2z"/></svg> Click a branch · Hover or tap dotted terms for definitions</div>
+          <div class="section-number">01 / THE BASICS</div>
+          <h2 id="system-title">Two modes: speed up and slow down.</h2>
+          <p class="section-intro">Your <button class="term" type="button" aria-expanded="false">autonomic nervous system<span class="tip" role="tooltip">It controls automatic functions, like your heartbeat and breathing.</span></button> helps your body react and recover. Tap a mode below.</p>
+          <div class="interaction-hint"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m8 4 9 8-5 1-2 6-3-1 2-6-4-2z"/></svg> Tap a mode · Tap dotted words for meanings</div>
         </div>
         <div class="diagram-layout">
           <div class="panel diagram-panel" aria-label="Interactive diagram of the two autonomic nervous system branches">
-            <div class="panel-kicker">The nervous system / simplified division</div>
+            <div class="panel-kicker">Your body’s automatic controls</div>
             <div class="root-node">
               <div class="root-small">The system</div>
               <div class="root-big">Autonomic nervous system</div>
-              <div class="root-caption">Automatic body functions</div>
+              <div class="root-caption">Heart rate, breathing, and more</div>
             </div>
             <div class="tree-connector" aria-hidden="true"></div>
             <div class="branches" role="group" aria-label="Choose a nervous system branch">
               <button type="button" class="branch gas" id="select-gas" data-mode="gas" aria-pressed="true" aria-controls="gas-panel brake-panel">
                 <span class="branch-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span>
-                <span class="branch-name">Sympathetic</span><span class="branch-desc">The gas pedal</span>
+                <span class="branch-name">Sympathetic</span><span class="branch-desc">Speed up · gas pedal</span>
                 <span class="branch-footer">FIGHT-OR-FLIGHT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></span>
               </button>
               <button type="button" class="branch brake" id="select-brake" data-mode="brake" aria-pressed="false" aria-controls="gas-panel brake-panel">
                 <span class="branch-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M12 21c5-5 8-8 8-13 0-3-2-5-5-5-2 0-3 1-3 3 0-2-1-3-3-3-3 0-5 2-5 5 0 5 3 8 8 13Z"/><path d="M12 8v9M8 12l4 2 4-3"/></svg></span>
-                <span class="branch-name">Parasympathetic</span><span class="branch-desc">The brake</span>
+                <span class="branch-name">Parasympathetic</span><span class="branch-desc">Slow down · brake</span>
                 <span class="branch-footer">REST &amp; DIGEST <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></span>
               </button>
             </div>
@@ -347,25 +350,25 @@
             <div class="panel-kicker">Selected branch / <span id="branch-current">Sympathetic</span></div>
             <div class="mode-gas" id="gas-panel">
               <span class="mode-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></svg></span>
-              <h3 class="mode-heading">The gas pedal: get ready to act</h3>
-              <p class="mode-summary">A difficult exam looks like a threat. The <button class="term" type="button" aria-expanded="false">hypothalamus<span class="tip" role="tooltip">A part of the brain that starts the sympathetic stress response when a situation is interpreted as a threat.</span></button> activates the sympathetic system to help you respond quickly.</p>
+              <h3 class="mode-heading">Gas pedal: get ready</h3>
+              <p class="mode-summary">A hard exam feels stressful. Your <button class="term" type="button" aria-expanded="false">hypothalamus<span class="tip" role="tooltip">A brain area that helps start the stress response.</span></button> signals your body to get ready.</p>
               <ul class="detail-list">
-                <li>Adrenal glands release <button class="term" type="button" aria-expanded="false">epinephrine<span class="tip" role="tooltip">Also called adrenaline. A chemical released into the bloodstream during the immediate stress response.</span></button> (adrenaline) into the bloodstream.</li>
-                <li>Your heart rate, pulse, and blood pressure rise; breathing gets faster and airways open wider.</li>
-                <li>Alertness sharpens and <button class="term" type="button" aria-expanded="false">glucose<span class="tip" role="tooltip">Blood sugar—one source of quick fuel for the body and brain.</span></button> (blood sugar) and stored fats become available as fuel.</li>
+                <li>Your adrenal glands release <button class="term" type="button" aria-expanded="false">adrenaline<span class="tip" role="tooltip">Also called epinephrine. It helps you respond quickly.</span></button>.</li>
+                <li>Your heart beats faster and your breathing speeds up.</li>
+                <li>You feel more alert. More <button class="term" type="button" aria-expanded="false">glucose<span class="tip" role="tooltip">Blood sugar your body uses for energy.</span></button> is available for energy.</li>
               </ul>
-              <div class="mode-takeaway">In the exam room: a pounding heart and faster breathing are signs that your body is mobilizing for a challenge.</div>
+              
             </div>
             <div class="mode-brake" id="brake-panel" hidden>
               <span class="mode-icon" aria-hidden="true"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M12 21c5-5 8-8 8-13 0-3-2-5-5-5-2 0-3 1-3 3 0-2-1-3-3-3-3 0-5 2-5 5 0 5 3 8 8 13Z"/><path d="M12 8v9M8 12l4 2 4-3"/></svg></span>
-              <h3 class="mode-heading">The brake: settle and restore</h3>
-              <p class="mode-summary">You hand in the exam. As the threat passes, the parasympathetic system helps the body move into its “rest and digest” state.</p>
+              <h3 class="mode-heading">Brake: time to recover</h3>
+              <p class="mode-summary">The exam ends. Your body begins to settle.</p>
               <ul class="detail-list">
-                <li>Circulating stress hormones such as <button class="term" type="button" aria-expanded="false">cortisol<span class="tip" role="tooltip">A stress-related hormone. Its circulating level falls as the threat subsides.</span></button> fall.</li>
-                <li>Heart rate slows and breathing returns toward its normal rhythm.</li>
-                <li>Muscle tension eases as the body returns toward a balanced, relaxed baseline.</li>
+                <li>Stress hormones, including <button class="term" type="button" aria-expanded="false">cortisol<span class="tip" role="tooltip">A stress hormone that usually falls as a stressor passes.</span></button>, gradually decrease.</li>
+                <li>Your heart and breathing slow down.</li>
+                <li>Your muscles can relax.</li>
               </ul>
-              <div class="mode-takeaway">After the exam: recovery is part of a healthy stress response, not the absence of one.</div>
+              
             </div>
           </div>
         </div>
@@ -375,13 +378,13 @@
     <section class="section timeline-section" id="timeline" aria-labelledby="timeline-title">
       <div class="container">
         <div class="section-head">
-          <div class="section-number">02 / FOLLOW THE SEQUENCE</div>
-          <h2 id="timeline-title">From threat to recovery, one moment at a time.</h2>
-          <p class="section-intro">Follow the exam scenario from the first surprise to the body's return toward balance. Reveal each step in order, or revisit any step you've already opened.</p>
+          <div class="section-number">02 / SEE IT HAPPEN</div>
+          <h2 id="timeline-title">What happens during a stressful exam?</h2>
+          <p class="section-intro">Press Next to follow the response, one short step at a time.</p>
         </div>
         <div class="timeline-layout">
           <div class="panel timeline-rail">
-            <div class="rail-top"><span class="rail-title">The exam-day timeline</span><span class="rail-count" id="rail-counter">0 of 7 revealed</span></div>
+            <div class="rail-top"><span class="rail-title">Exam-day steps</span><span class="rail-count" id="rail-counter">0 of 7 revealed</span></div>
             <ol class="timeline-items" id="timeline-items">
               <li><button type="button" class="timeline-point" data-step="0"><span class="number">1</span><span class="step-text"><span class="step-title">Reveal moment 1</span><span class="step-subtitle">Click to begin</span></span></button></li>
               <li><button type="button" class="timeline-point" data-step="1" aria-disabled="true"><span class="number">2</span><span class="step-text"><span class="step-title">Moment 2</span><span class="step-subtitle">Not yet revealed</span></span></button></li>
@@ -396,10 +399,10 @@
             <div class="stage-overline"><span id="stage-counter">READY TO BEGIN</span><span class="stage-phase" id="stage-phase">EXAM SCENARIO</span></div>
             <div class="stage-meter" role="progressbar" aria-label="Timeline steps revealed" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" id="stage-progress"><div class="stage-fill" id="stage-fill"></div></div>
             <div class="stage-graphic" id="stage-graphic" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
-            <h3 class="stage-title" id="stage-title">The story begins with an exam.</h3>
-            <p class="stage-copy" id="stage-copy" aria-live="polite">Select the first moment, or use the button below to uncover what happens inside your body.</p>
+            <h3 class="stage-title" id="stage-title">A hard exam question</h3>
+            <p class="stage-copy" id="stage-copy" aria-live="polite">Press Next to see how your body responds.</p>
             <div class="stage-bottom">
-              <button class="primary-button" id="next-step" type="button">Reveal first step <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></button>
+              <button class="primary-button" id="next-step" type="button">Start the story <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12h14m-6-6 6 6-6 6"/></svg></button>
               <button class="secondary-button" id="restart-timeline" type="button">Start over</button>
             </div>
           </div>
@@ -410,23 +413,23 @@
     <section class="section" id="stress-types" aria-labelledby="types-title">
       <div class="container">
         <div class="section-head">
-          <div class="section-number">03 / MAKE THE DISTINCTION</div>
-          <h2 id="types-title">Stress is not automatically a bad thing.</h2>
-          <p class="section-intro">The same response that helps you meet an immediate demand can become a problem when the body stays on high alert for too long.</p>
+          <div class="section-number">03 / KNOW THE DIFFERENCE</div>
+          <h2 id="types-title">Short-term vs. long-term stress</h2>
+          <p class="section-intro">A little stress can help. Too much for too long can affect your health.</p>
         </div>
         <div class="comparison-layout">
           <article class="compare-card acute">
             <div class="compare-eyebrow">Short-term / <button class="term" type="button" aria-expanded="false">acute stress<span class="tip" role="tooltip">Stress in response to an event or demand that ends once the situation passes.</span></button></div>
-            <h3>A useful burst of focus and fuel.</h3>
-            <p>A big test or deadline can create a short-lived response. Faster breathing and more available energy help the brain and body meet the demand. That extra push can feel motivating.</p>
+            <h3>A quick boost</h3>
+            <p>A brief challenge may help you focus and act quickly.</p>
           </article>
           <article class="compare-card chronic">
             <div class="compare-eyebrow">Long-term / <button class="term" type="button" aria-expanded="false">chronic stress<span class="tip" role="tooltip">Stress that persists and keeps the body's stress response active over time.</span></button></div>
-            <h3>When “high alert” keeps going.</h3>
-            <p>If activation persists, it can interfere with sleep, affect immune function, and contribute to longer-term physical and psychological problems. Ongoing anxiety can also keep the body on alert.</p>
+            <h3>Stress that stays</h3>
+            <p>Ongoing stress can affect sleep, mood, and physical health.</p>
           </article>
         </div>
-        <div class="compare-note"><strong>One more piece of the picture:</strong> <button class="term" type="button" aria-expanded="false">Norepinephrine<span class="tip" role="tooltip">A chemical messenger involved in alertness and arousal.</span></button> helps regulate alertness and arousal. The neurotransmitters <button class="term" type="button" aria-expanded="false">glutamate<span class="tip" role="tooltip">A neurotransmitter with a role in learning and memory.</span></button> and <button class="term" type="button" aria-expanded="false">acetylcholine<span class="tip" role="tooltip">A neurotransmitter with a role in learning and memory.</span></button> play roles in learning and memory.</div>
+        <details class="compare-note"><summary>Extra science (optional)</summary><p><button class="term" type="button" aria-expanded="false">Norepinephrine<span class="tip" role="tooltip">Helps with alertness.</span></button> supports alertness. <button class="term" type="button" aria-expanded="false">Glutamate<span class="tip" role="tooltip">A messenger involved in learning and memory.</span></button> and <button class="term" type="button" aria-expanded="false">acetylcholine<span class="tip" role="tooltip">A messenger involved in learning and memory.</span></button> also help with learning and memory.</p></details>
       </div>
     </section>
 
@@ -434,60 +437,60 @@
       <div class="container">
         <div class="quiz-header">
           <div class="section-head">
-            <div class="section-number">04 / CHECK YOUR UNDERSTANDING</div>
-            <h2 id="quiz-title">Five quick questions. No pressure.</h2>
-            <p class="section-intro">Choose an answer and get feedback straight away. You can change any answer or try the whole quiz again.</p>
+            <div class="section-number">04 / TRY IT</div>
+            <h2 id="quiz-title">Quick quiz: 5 questions</h2>
+            <p class="section-intro">Tap an answer to see how you did.</p>
           </div>
           <div class="quiz-score" aria-live="polite"><div class="score-value" id="score-value">0 / 5</div><div class="score-caption" id="score-caption">0 of 5 answered</div></div>
         </div>
         <div class="quiz-progress" role="progressbar" aria-label="Self-check questions answered" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="quiz-progress"><div class="quiz-progress-bar" id="quiz-progress-bar"></div></div>
         <div class="quiz-grid" id="quiz-grid">
-          <fieldset class="question-card" data-answer="b" data-explanation="The sympathetic branch is the gas pedal that responds to a perceived threat.">
-            <legend><span class="q-count">QUESTION 01</span><span class="q-title">You flip over a difficult exam paper. Which branch helps your body gear up?</span></legend>
+          <fieldset class="question-card" data-answer="b" data-explanation="Sympathetic means “speed up.”">
+            <legend><span class="q-count">QUESTION 01</span><span class="q-title">Which system speeds up your body?</span></legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="q1" value="a"> Parasympathetic nervous system</label>
               <label class="choice"><input type="radio" name="q1" value="b"> Sympathetic nervous system</label>
               <label class="choice"><input type="radio" name="q1" value="c"> Neither branch responds</label>
             </div><p class="question-feedback" aria-live="polite" hidden></p>
           </fieldset>
-          <fieldset class="question-card" data-answer="a" data-explanation="Adrenal glands release epinephrine (adrenaline) into the bloodstream during the immediate stress response.">
-            <legend><span class="q-count">QUESTION 02</span><span class="q-title">Which chemical enters the bloodstream during the immediate gas-pedal response?</span></legend>
+          <fieldset class="question-card" data-answer="a" data-explanation="The adrenal glands release adrenaline.">
+            <legend><span class="q-count">QUESTION 02</span><span class="q-title">Which chemical helps the quick response?</span></legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="q2" value="a"> Epinephrine (adrenaline)</label>
               <label class="choice"><input type="radio" name="q2" value="b"> Stored fats alone</label>
               <label class="choice"><input type="radio" name="q2" value="c"> Glucose alone</label>
             </div><p class="question-feedback" aria-live="polite" hidden></p>
           </fieldset>
-          <fieldset class="question-card" data-answer="c" data-explanation="The sympathetic response raises heart rate and speeds up breathing while making more energy available.">
-            <legend><span class="q-count">QUESTION 03</span><span class="q-title">What might you notice in your body during the exam?</span></legend>
+          <fieldset class="question-card" data-answer="c" data-explanation="Stress can make your heart and breathing faster.">
+            <legend><span class="q-count">QUESTION 03</span><span class="q-title">What happens when stress kicks in?</span></legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="q3" value="a"> Slower heart rate and less alertness</label>
               <label class="choice"><input type="radio" name="q3" value="b"> No physical changes at all</label>
               <label class="choice"><input type="radio" name="q3" value="c"> Faster breathing and a pounding heart</label>
             </div><p class="question-feedback" aria-live="polite" hidden></p>
           </fieldset>
-          <fieldset class="question-card" data-answer="b" data-explanation="The parasympathetic branch is the brake: heart rate slows, breathing normalizes, and muscles relax.">
-            <legend><span class="q-count">QUESTION 04</span><span class="q-title">You hand in the exam. What helps your body return toward baseline?</span></legend>
+          <fieldset class="question-card" data-answer="b" data-explanation="Parasympathetic activity helps the body settle.">
+            <legend><span class="q-count">QUESTION 04</span><span class="q-title">Which system helps you recover?</span></legend>
             <div class="choices">
               <label class="choice"><input type="radio" name="q4" value="a"> A permanent adrenaline surge</label>
               <label class="choice"><input type="radio" name="q4" value="b"> Parasympathetic activity</label>
               <label class="choice"><input type="radio" name="q4" value="c"> The gas pedal staying fully on</label>
             </div><p class="question-feedback" aria-live="polite" hidden></p>
           </fieldset>
-          <fieldset class="question-card" data-answer="a" data-explanation="Short-term stress can support performance, but sustained stress activation can interfere with sleep and immune function.">
-            <legend><span class="q-count">QUESTION 05</span><span class="q-title">Which statement best captures the difference between short-term and chronic stress?</span></legend>
+          <fieldset class="question-card" data-answer="a" data-explanation="Brief stress may help, but ongoing stress can affect health.">
+            <legend><span class="q-count">QUESTION 05</span><span class="q-title">Which statement about stress is true?</span></legend>
             <div class="choices">
-              <label class="choice"><input type="radio" name="q5" value="a"> Brief stress can be useful; ongoing stress can be harmful.</label>
-              <label class="choice"><input type="radio" name="q5" value="b"> Every stress response is harmful from the start.</label>
-              <label class="choice"><input type="radio" name="q5" value="c"> Chronic stress always improves sleep and immunity.</label>
+              <label class="choice"><input type="radio" name="q5" value="a"> Brief stress may help; ongoing stress can harm health.</label>
+              <label class="choice"><input type="radio" name="q5" value="b"> All stress is harmful.</label>
+              <label class="choice"><input type="radio" name="q5" value="c"> Long-term stress always helps.</label>
             </div><p class="question-feedback" aria-live="polite" hidden></p>
           </fieldset>
         </div>
-        <div class="quiz-footer"><span class="completion" id="completion" role="status">Your score updates as you answer.</span><button class="secondary-button" id="reset-quiz" type="button">Reset my answers</button></div>
+        <div class="quiz-footer"><span class="completion" id="completion" role="status">Your score appears as you answer.</span><button class="secondary-button" id="reset-quiz" type="button">Try again</button></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><span><strong>The takeaway:</strong> Stress can help you respond to a challenge. The ability to recover matters, too.</span><a href="#main">Back to top ↑</a></div></footer>
+  <footer class="footer"><div class="container footer-inner"><span><strong>Remember:</strong> Your body speeds up for a challenge and slows down to recover.</span><a href="#main">Back to top ↑</a></div></footer>
 
   <script>
     'use strict';
@@ -519,13 +522,13 @@
 
     // Reveal one timeline moment at a time; unlocked moments remain reviewable.
     const moments = [
-      {title:'The exam looks threatening',short:'The difficult paper',detail:'You turn over a surprisingly difficult exam paper. Your brain interprets the challenge as a possible threat or stressor.',phase:'challenge',label:'THE CHALLENGE'},
-      {title:'The hypothalamus sounds the signal',short:'The brain switches on',detail:'The hypothalamus activates the sympathetic nervous system. The body presses its metaphorical gas pedal and prepares for an immediate demand.',phase:'gas',label:'GAS PEDAL'},
-      {title:'Adrenaline enters the bloodstream',short:'The chemical surge',detail:'Autonomic nerves signal the adrenal glands to release epinephrine (adrenaline) into the bloodstream, providing a quick response to the challenge.',phase:'gas',label:'GAS PEDAL'},
-      {title:'Your body gears up',short:'More oxygen and fuel',detail:'Heart rate, pulse, and blood pressure rise. Breathing quickens, airways open wider, and glucose and stored fats become available as fuel. Alertness sharpens.',phase:'gas',label:'GAS PEDAL'},
-      {title:'You hand in the exam',short:'The threat passes',detail:'The exam ends. You turn in the paper and leave the situation that your brain interpreted as threatening.',phase:'recovery',label:'RECOVERY'},
-      {title:'The parasympathetic brake engages',short:'The body starts settling',detail:'The parasympathetic nervous system takes over to support rest and digestion. As the threat subsides, circulating stress hormones such as cortisol fall.',phase:'recovery',label:'RECOVERY'},
-      {title:'Your body returns toward baseline',short:'Recovery and balance',detail:'Heart rate slows, breathing normalizes, muscle tension eases, and the body returns toward a balanced, more relaxed state.',phase:'recovery',label:'RECOVERY'}
+      {title:'A hard exam question',short:'The challenge',detail:'A difficult question feels stressful.',phase:'challenge',label:'THE CHALLENGE'},
+      {title:'Your brain sends a signal',short:'The brain reacts',detail:'Your brain switches on the fast-response system.',phase:'gas',label:'SPEED UP'},
+      {title:'Adrenaline is released',short:'Adrenaline',detail:'Your adrenal glands release adrenaline into your blood.',phase:'gas',label:'SPEED UP'},
+      {title:'Your body gets ready',short:'Heart and breathing',detail:'Your heart and breathing speed up. You feel more alert.',phase:'gas',label:'SPEED UP'},
+      {title:'The exam ends',short:'The stressor passes',detail:'You hand in the exam. The stressful moment is over.',phase:'recovery',label:'RECOVERY'},
+      {title:'Your body slows down',short:'The brake starts',detail:'The parasympathetic system helps slow your heart and breathing.',phase:'recovery',label:'RECOVERY'},
+      {title:'You begin to recover',short:'Back toward normal',detail:'Your body gradually returns toward its usual state.',phase:'recovery',label:'RECOVERY'}
     ];
     const nodes = Array.from(document.querySelectorAll('.timeline-items li'));
     const timelineButtons = Array.from(document.querySelectorAll('.timeline-point'));
@@ -552,8 +555,8 @@
         button.setAttribute('aria-disabled',String(!unlocked && !isNext));
         if (index === activeStep) button.setAttribute('aria-current','step');
         else button.removeAttribute('aria-current');
-        button.querySelector('.step-title').textContent = unlocked ? moments[index].short : isNext ? `Reveal moment ${index+1}` : `Moment ${index+1}`;
-        button.querySelector('.step-subtitle').textContent = unlocked ? (index === activeStep ? 'Currently viewing' : 'Click to review') : isNext ? 'Click to reveal' : 'Not yet revealed';
+        button.querySelector('.step-title').textContent = unlocked ? moments[index].short : isNext ? `Open step ${index+1}` : `Step ${index+1}`;
+        button.querySelector('.step-subtitle').textContent = unlocked ? (index === activeStep ? 'Viewing' : 'Review') : isNext ? 'Tap to reveal' : 'Locked';
       });
       document.getElementById('rail-counter').textContent = `${revealed+1} of 7 revealed`;
       document.getElementById('stage-fill').style.width = `${(revealed+1)/moments.length*100}%`;
@@ -562,8 +565,8 @@
         counterEl.textContent = 'READY TO BEGIN';
         phaseEl.textContent = 'EXAM SCENARIO';
         phaseEl.classList.remove('recovery');
-        titleEl.textContent = 'The story begins with an exam.';
-        copyEl.textContent = 'Select the first moment, or use the button below to uncover what happens inside your body.';
+        titleEl.textContent = 'A hard exam question';
+        copyEl.textContent = 'Press Next to see how your body responds.';
         graphicEl.className = 'stage-graphic';
         graphicEl.innerHTML = `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${graphicIcons.challenge}</svg>`;
       } else {
@@ -576,8 +579,8 @@
         graphicEl.className = `stage-graphic ${current.phase === 'gas' ? 'is-gas' : current.phase === 'recovery' ? 'is-brake' : ''}`;
         graphicEl.innerHTML = `<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${graphicIcons[current.phase]}</svg>`;
       }
-      if (revealed === moments.length-1) nextStep.innerHTML = 'Replay from the start <span aria-hidden="true">↻</span>';
-      else nextStep.innerHTML = `${revealed === -1 ? 'Reveal first step' : 'Reveal next step'} <span aria-hidden="true">→</span>`;
+      if (revealed === moments.length-1) nextStep.innerHTML = 'Replay <span aria-hidden="true">↻</span>';
+      else nextStep.innerHTML = `${revealed === -1 ? 'Start the story' : 'Next step'} <span aria-hidden="true">→</span>`;
     }
     function revealOrReview(index) {
       if (index > revealed+1 || index < 0) return;
@@ -616,7 +619,7 @@
       document.getElementById('quiz-progress-bar').style.width = `${answered/5*100}%`;
       const finish=document.getElementById('completion');
       finish.classList.toggle('finished',answered===5);
-      finish.textContent = answered===5 ? `Complete! ${correct} of 5 correct. You can revise any answer.` : answered===0 ? 'Your score updates as you answer.' : `${5-answered} question${5-answered===1?'':'s'} left to answer.`;
+      finish.textContent = answered===5 ? `Complete! ${correct} of 5 correct. You can revise any answer.` : answered===0 ? 'Your score appears as you answer.' : `${5-answered} question${5-answered===1?'':'s'} left to answer.`;
     }
     document.getElementById('quiz-grid').addEventListener('change',updateQuiz);
     document.getElementById('reset-quiz').addEventListener('click',()=>{
